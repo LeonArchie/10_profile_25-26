@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: counter-config
+data:
+  LOG_LEVEL: "INFO"
+  MAX_COUNTER_VALUE: "9223372036854775807"
