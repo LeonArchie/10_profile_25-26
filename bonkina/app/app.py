@@ -2,6 +2,7 @@
 # flask - библиотека для создания веб-приложений; Flask - класс внутри библиотеки
 # jsonify - для отправки данных пользователю
 from flask import Flask, jsonify
+from flask_cors import CORS  
 
 # Вычисляем максимальные и минимальные значения для 64-битных чисел
 MAX_UNSIGNED_64BIT = (1 << 64) - 1
@@ -10,6 +11,7 @@ MAX_SIGNED_64BIT = (1 << 63) - 1
 
 # Flask использует __name__, чтобы определить: файл запущен напрямую или импортирован как модуль
 app = Flask(__name__)
+CORS(app)  
 # Проверка жив или нет
 @app.route('/livez', methods=['GET'])
 def livez():
