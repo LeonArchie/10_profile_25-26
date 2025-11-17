@@ -1,3 +1,4 @@
 Flask==2.0.3
 Werkzeug==2.0.3
+flask_cors  
 gunicorn>=21.2.0
